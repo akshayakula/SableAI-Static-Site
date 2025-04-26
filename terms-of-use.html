@@ -5,29 +5,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Terms of Use | SablAI</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0b0c15',
+            secondary: '#141729',
+            highlight: '#00ADB5',
+            accent: '#EEEEEE',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .gradient-text {
+      background: linear-gradient(90deg, #4864F3 0%, #56CCF2 25%, #847BF2 50%, #B263E4 75%, #D72CBC 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+  </style>
 </head>
-<body class="bg-primary text-accent font-sans">
-  <div class="container mx-auto px-4 py-12">
-    <h1 class="text-4xl font-bold mb-6">Terms of Use</h1>
-    <p class="mb-4">Last updated: May 2024</p>
+<body class="bg-primary text-accent font-sans min-h-screen">
+  <div class="dot-grid"></div>
+  <script>
+    // Sparkling stars for background
+    document.addEventListener('DOMContentLoaded', function() {
+      const container = document.body;
+      for (let i = 0; i < 40; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        star.style.left = Math.random() * 100 + '%';
+        star.style.top = Math.random() * 100 + '%';
+        star.style.width = star.style.height = (Math.random() * 2 + 1) + 'px';
+        star.style.animationDelay = (Math.random() * 4) + 's';
+        container.appendChild(star);
+      }
+    });
+  </script>
+  <div class="container mx-auto px-4 py-12 relative z-10 max-w-3xl bg-secondary/80 rounded-xl shadow-2xl mt-16 mb-16">
+    <h1 class="text-4xl font-bold mb-6 text-center gradient-text">Terms of Use</h1>
     <p class="mb-4">Welcome to SablAI. By accessing or using our website, you agree to be bound by these Terms of Use. If you do not agree with any part of these terms, please do not use our website.</p>
-    <h2 class="text-2xl font-semibold mt-8 mb-2">Use of the Website</h2>
+    <h2 class="text-2xl font-semibold mt-8 mb-2 gradient-text">Use of the Website</h2>
     <ul class="list-disc ml-6 mb-4">
       <li>You may use this website for lawful purposes only.</li>
       <li>You agree not to misuse, disrupt, or attempt to gain unauthorized access to any part of the website.</li>
     </ul>
-    <h2 class="text-2xl font-semibold mt-8 mb-2">Intellectual Property</h2>
+    <h2 class="text-2xl font-semibold mt-8 mb-2 gradient-text">Intellectual Property</h2>
     <p class="mb-4">All content on this website, including text, graphics, logos, and design, is the property of SablAI or its licensors and is protected by applicable copyright and trademark laws.</p>
-    <h2 class="text-2xl font-semibold mt-8 mb-2">Disclaimer</h2>
+    <h2 class="text-2xl font-semibold mt-8 mb-2 gradient-text">Disclaimer</h2>
     <p class="mb-4">This website is provided "as is" and "as available" without warranties of any kind. We do not guarantee the accuracy, completeness, or reliability of any content.</p>
-    <h2 class="text-2xl font-semibold mt-8 mb-2">Limitation of Liability</h2>
+    <h2 class="text-2xl font-semibold mt-8 mb-2 gradient-text">Limitation of Liability</h2>
     <p class="mb-4">To the fullest extent permitted by law, SablAI shall not be liable for any damages arising from your use of or inability to use this website.</p>
-    <h2 class="text-2xl font-semibold mt-8 mb-2">Links to Other Sites</h2>
+    <h2 class="text-2xl font-semibold mt-8 mb-2 gradient-text">Links to Other Sites</h2>
     <p class="mb-4">Our website may contain links to third-party sites. We are not responsible for the content or practices of those sites.</p>
-    <h2 class="text-2xl font-semibold mt-8 mb-2">Changes to These Terms</h2>
+    <h2 class="text-2xl font-semibold mt-8 mb-2 gradient-text">Changes to These Terms</h2>
     <p class="mb-4">We may update these Terms of Use at any time. Changes will be posted on this page with an updated date.</p>
-    <h2 class="text-2xl font-semibold mt-8 mb-2">Contact Us</h2>
-    <p>If you have any questions about these Terms, please contact us at <a href="mailto:info@sablaiai.com" class="text-highlight underline">info@sablaiai.com</a>.</p>
+    <h2 class="text-2xl font-semibold mt-8 mb-2 gradient-text">Contact Us</h2>
+    <p>If you have any questions about these Terms, please contact us at <a href="mailto:info@sablaiai.com" class="text-highlight underline gradient-text">info@sablaiai.com</a>.</p>
   </div>
 </body>
 </html> 

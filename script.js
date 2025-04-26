@@ -389,39 +389,40 @@ function animateWaveform() {
   const canvas = document.getElementById('animatedWave');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
-  const width = canvas.width;
-  const height = canvas.height;
 
-  // Gradient for the bars
-  const gradient = ctx.createLinearGradient(0, 0, width, 0);
-  gradient.addColorStop(0, '#4864F3');
-  gradient.addColorStop(0.25, '#56CCF2');
-  gradient.addColorStop(0.5, '#847BF2');
-  gradient.addColorStop(0.75, '#B263E4');
-  gradient.addColorStop(1, '#D72CBC');
+  function resizeCanvas() {
+    canvas.width = canvas.offsetWidth;
+    canvas.height = 150;
+  }
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
 
   let t = 0;
-
-  // Blip state
   let blipActive = false;
   let blipStartTime = 0;
-  let blipDuration = 2.525; // seconds (25% slower)
-  let blipInterval = 2.5; // initial value, will randomize after each blip
+  let blipDuration = 2.525;
+  let blipInterval = 2.5;
   let lastBlip = performance.now();
 
   function draw(now) {
+    resizeCanvas();
+    const width = canvas.width;
+    const height = canvas.height;
+    const gradient = ctx.createLinearGradient(0, 0, width, 0);
+    gradient.addColorStop(0, '#4864F3');
+    gradient.addColorStop(0.25, '#56CCF2');
+    gradient.addColorStop(0.5, '#847BF2');
+    gradient.addColorStop(0.75, '#B263E4');
+    gradient.addColorStop(1, '#D72CBC');
     ctx.clearRect(0, 0, width, height);
     ctx.save();
-    // Draw bar waveform
     const barWidth = 7.5;
     const barSpacing = 16;
     for (let x = 0; x <= width; x += barSpacing) {
-      // Top of bar (wave)
       let baseY = height/2
         + Math.sin((x/220) + t) * 32
         + Math.sin((x/90) - t*1.2) * 18
         + Math.sin((x/40) + t*0.7) * 8;
-      // Blip effect
       let blipY = 0;
       if (blipActive) {
         let elapsed = (now - blipStartTime) / 1000;
@@ -433,7 +434,6 @@ function animateWaveform() {
         }
       }
       let yTop = baseY + blipY;
-      // Bottom of bar (mirrored wave)
       let baseY2 = height/2
         - Math.sin((x/220) + t) * 32
         - Math.sin((x/90) - t*1.2) * 18
@@ -449,7 +449,6 @@ function animateWaveform() {
         }
       }
       let yBot = baseY2 + blipY2;
-      // Draw the bar
       ctx.save();
       ctx.beginPath();
       ctx.rect(x - barWidth/2, yTop, barWidth, yBot - yTop);
@@ -462,8 +461,6 @@ function animateWaveform() {
     }
     ctx.restore();
     t += 0.018;
-
-    // Blip timing
     if (!blipActive && now - lastBlip > blipInterval * 1000) {
       blipActive = true;
       blipStartTime = now;
@@ -471,10 +468,8 @@ function animateWaveform() {
     }
     if (blipActive && now - blipStartTime > blipDuration * 1000) {
       blipActive = false;
-      // Randomize next interval between 2 and 5 seconds
       blipInterval = 2 + Math.random() * 3;
     }
-
     requestAnimationFrame(draw);
   }
   requestAnimationFrame(draw);

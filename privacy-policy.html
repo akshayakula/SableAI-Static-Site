@@ -5,35 +5,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy | SablAI</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0b0c15',
+            secondary: '#141729',
+            highlight: '#00ADB5',
+            accent: '#EEEEEE',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .gradient-text {
+      background: linear-gradient(90deg, #4864F3 0%, #56CCF2 25%, #847BF2 50%, #B263E4 75%, #D72CBC 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+  </style>
 </head>
-<body class="bg-primary text-accent font-sans">
-  <div class="container mx-auto px-4 py-12">
-    <h1 class="text-4xl font-bold mb-6">Privacy Policy</h1>
-    <p class="mb-4">Last updated: May 2024</p>
+<body class="bg-primary text-accent font-sans min-h-screen">
+  <div class="dot-grid"></div>
+  <script>
+    // Sparkling stars for background
+    document.addEventListener('DOMContentLoaded', function() {
+      const container = document.body;
+      for (let i = 0; i < 40; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        star.style.left = Math.random() * 100 + '%';
+        star.style.top = Math.random() * 100 + '%';
+        star.style.width = star.style.height = (Math.random() * 2 + 1) + 'px';
+        star.style.animationDelay = (Math.random() * 4) + 's';
+        container.appendChild(star);
+      }
+    });
+  </script>
+  <div class="container mx-auto px-4 py-12 relative z-10 max-w-3xl bg-secondary/80 rounded-xl shadow-2xl mt-16 mb-16">
+    <h1 class="text-4xl font-bold mb-6 text-center gradient-text">Privacy Policy</h1>
     <p class="mb-4">SablAI ("we", "us", or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website.</p>
-    <h2 class="text-2xl font-semibold mt-8 mb-2">Information We Collect</h2>
+    <h2 class="text-2xl font-semibold mt-8 mb-2 gradient-text">Information We Collect</h2>
     <ul class="list-disc ml-6 mb-4">
       <li>We may collect basic information you provide, such as your name and email address, if you contact us or sign up for updates.</li>
       <li>We may collect non-personal information automatically, such as browser type, device, and usage data, to improve our website.</li>
     </ul>
-    <h2 class="text-2xl font-semibold mt-8 mb-2">How We Use Information</h2>
+    <h2 class="text-2xl font-semibold mt-8 mb-2 gradient-text">How We Use Information</h2>
     <ul class="list-disc ml-6 mb-4">
       <li>To provide, operate, and maintain our website.</li>
       <li>To communicate with you, including responding to inquiries and sending updates.</li>
       <li>To improve and personalize your experience.</li>
     </ul>
-    <h2 class="text-2xl font-semibold mt-8 mb-2">Cookies</h2>
+    <h2 class="text-2xl font-semibold mt-8 mb-2 gradient-text">Cookies</h2>
     <p class="mb-4">We may use cookies and similar tracking technologies to enhance your experience. You can disable cookies in your browser settings.</p>
-    <h2 class="text-2xl font-semibold mt-8 mb-2">Third-Party Services</h2>
+    <h2 class="text-2xl font-semibold mt-8 mb-2 gradient-text">Third-Party Services</h2>
     <p class="mb-4">We may use third-party services (such as analytics) that collect, monitor, and analyze usage of our website. These services have their own privacy policies.</p>
-    <h2 class="text-2xl font-semibold mt-8 mb-2">Data Security</h2>
+    <h2 class="text-2xl font-semibold mt-8 mb-2 gradient-text">Data Security</h2>
     <p class="mb-4">We take reasonable measures to protect your information, but no method of transmission over the Internet is 100% secure.</p>
-    <h2 class="text-2xl font-semibold mt-8 mb-2">Your Rights</h2>
+    <h2 class="text-2xl font-semibold mt-8 mb-2 gradient-text">Your Rights</h2>
     <p class="mb-4">You may contact us to access, update, or delete your personal information, subject to applicable law.</p>
-    <h2 class="text-2xl font-semibold mt-8 mb-2">Changes to This Policy</h2>
+    <h2 class="text-2xl font-semibold mt-8 mb-2 gradient-text">Changes to This Policy</h2>
     <p class="mb-4">We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated date.</p>
-    <h2 class="text-2xl font-semibold mt-8 mb-2">Contact Us</h2>
-    <p>If you have any questions about this Privacy Policy, please contact us at <a href="mailto:info@sablaiai.com" class="text-highlight underline">info@sablaiai.com</a>.</p>
+    <h2 class="text-2xl font-semibold mt-8 mb-2 gradient-text">Contact Us</h2>
+    <p>If you have any questions about this Privacy Policy, please contact us at <a href="mailto:info@sablaiai.com" class="text-highlight underline gradient-text">info@sablaiai.com</a>.</p>
   </div>
 </body>
 </html> 

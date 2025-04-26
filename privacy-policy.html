@@ -24,6 +24,8 @@
     }
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="assets/favicon.png">
   <style>
     .gradient-text {
       background: linear-gradient(90deg, #4864F3 0%, #56CCF2 25%, #847BF2 50%, #B263E4 75%, #D72CBC 100%);
@@ -51,32 +53,66 @@
       }
     });
   </script>
-  <div class="container mx-auto px-4 py-12 relative z-10 max-w-3xl bg-secondary/80 rounded-xl shadow-2xl mt-16 mb-16">
-    <h1 class="text-4xl font-bold mb-6 text-center gradient-text">Privacy Policy</h1>
-    <p class="mb-4">SablAI ("we", "us", or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website.</p>
-    <h2 class="text-2xl font-semibold mt-8 mb-2 gradient-text">Information We Collect</h2>
-    <ul class="list-disc ml-6 mb-4">
-      <li>We may collect basic information you provide, such as your name and email address, if you contact us or sign up for updates.</li>
-      <li>We may collect non-personal information automatically, such as browser type, device, and usage data, to improve our website.</li>
-    </ul>
-    <h2 class="text-2xl font-semibold mt-8 mb-2 gradient-text">How We Use Information</h2>
-    <ul class="list-disc ml-6 mb-4">
-      <li>To provide, operate, and maintain our website.</li>
-      <li>To communicate with you, including responding to inquiries and sending updates.</li>
-      <li>To improve and personalize your experience.</li>
-    </ul>
-    <h2 class="text-2xl font-semibold mt-8 mb-2 gradient-text">Cookies</h2>
-    <p class="mb-4">We may use cookies and similar tracking technologies to enhance your experience. You can disable cookies in your browser settings.</p>
-    <h2 class="text-2xl font-semibold mt-8 mb-2 gradient-text">Third-Party Services</h2>
-    <p class="mb-4">We may use third-party services (such as analytics) that collect, monitor, and analyze usage of our website. These services have their own privacy policies.</p>
-    <h2 class="text-2xl font-semibold mt-8 mb-2 gradient-text">Data Security</h2>
-    <p class="mb-4">We take reasonable measures to protect your information, but no method of transmission over the Internet is 100% secure.</p>
-    <h2 class="text-2xl font-semibold mt-8 mb-2 gradient-text">Your Rights</h2>
-    <p class="mb-4">You may contact us to access, update, or delete your personal information, subject to applicable law.</p>
-    <h2 class="text-2xl font-semibold mt-8 mb-2 gradient-text">Changes to This Policy</h2>
-    <p class="mb-4">We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated date.</p>
-    <h2 class="text-2xl font-semibold mt-8 mb-2 gradient-text">Contact Us</h2>
-    <p>If you have any questions about this Privacy Policy, please contact us at <a href="mailto:info@sablaiai.com" class="text-highlight underline gradient-text">info@sablaiai.com</a>.</p>
-  </div>
+  <!-- Header -->
+  <header class="fixed w-full z-50 py-4 bg-primary/90 backdrop-blur-md">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <div class="flex items-center">
+        <img src="assets/logo.svg" alt="SablAI Logo" class="h-8 logo-img">
+      </div>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="index.html#how-it-works" class="hover:text-blue-400 transition-colors">How It Works</a></li>
+          <li><a href="index.html#demo" class="hover:text-purple-400 transition-colors">Demo</a></li>
+          <li><a href="index.html#features" class="hover:text-blue-400 transition-colors">Features</a></li>
+          <li><a href="https://calendly.com/akshayakula/coffee-chat" class="gradient-btn px-4 py-2 rounded-md" target="_blank" rel="noopener">Get Early Access</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="pt-28">
+    <div class="container mx-auto px-4 py-12 relative z-10 max-w-3xl bg-secondary/80 rounded-xl shadow-2xl mt-16 mb-16">
+      <h1 class="text-4xl font-bold mb-6 text-center gradient-text">Privacy Policy</h1>
+      <p class="mb-4">SablAI ("we", "us", or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website.</p>
+      <h2 class="text-2xl font-semibold mt-8 mb-2 gradient-text">Information We Collect</h2>
+      <ul class="list-disc ml-6 mb-4">
+        <li>We may collect basic information you provide, such as your name and email address, if you contact us or sign up for updates.</li>
+        <li>We may collect non-personal information automatically, such as browser type, device, and usage data, to improve our website.</li>
+      </ul>
+      <h2 class="text-2xl font-semibold mt-8 mb-2 gradient-text">How We Use Information</h2>
+      <ul class="list-disc ml-6 mb-4">
+        <li>To provide, operate, and maintain our website.</li>
+        <li>To communicate with you, including responding to inquiries and sending updates.</li>
+        <li>To improve and personalize your experience.</li>
+      </ul>
+      <h2 class="text-2xl font-semibold mt-8 mb-2 gradient-text">Cookies</h2>
+      <p class="mb-4">We may use cookies and similar tracking technologies to enhance your experience. You can disable cookies in your browser settings.</p>
+      <h2 class="text-2xl font-semibold mt-8 mb-2 gradient-text">Third-Party Services</h2>
+      <p class="mb-4">We may use third-party services (such as analytics) that collect, monitor, and analyze usage of our website. These services have their own privacy policies.</p>
+      <h2 class="text-2xl font-semibold mt-8 mb-2 gradient-text">Data Security</h2>
+      <p class="mb-4">We take reasonable measures to protect your information, but no method of transmission over the Internet is 100% secure.</p>
+      <h2 class="text-2xl font-semibold mt-8 mb-2 gradient-text">Your Rights</h2>
+      <p class="mb-4">You may contact us to access, update, or delete your personal information, subject to applicable law.</p>
+      <h2 class="text-2xl font-semibold mt-8 mb-2 gradient-text">Changes to This Policy</h2>
+      <p class="mb-4">We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated date.</p>
+      <h2 class="text-2xl font-semibold mt-8 mb-2 gradient-text">Contact Us</h2>
+      <p>If you have any questions about this Privacy Policy, please contact us at <a href="mailto:info@sablaiai.com" class="text-highlight underline gradient-text">info@sablaiai.com</a>.</p>
+    </div>
+  </main>
+  <div class="gradient-divider"></div>
+  <footer class="py-10 bg-secondary relative">
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-6 md:mb-0">
+          <p class="text-accent/60">SablAI™ — Built for the Future.</p>
+        </div>
+        <div class="flex space-x-6">
+          <a href="privacy-policy.html" class="text-accent/60 hover:text-blue-400 transition-colors">Privacy Policy</a>
+          <a href="terms-of-use.html" class="text-accent/60 hover:text-purple-400 transition-colors">Terms of Use</a>
+          <a href="https://www.linkedin.com/in/akshayakula/" class="text-accent/60 hover:text-blue-400 transition-colors" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://x.com/akshay_akula" class="text-accent/60 hover:text-purple-400 transition-colors" target="_blank" rel="noopener">X (Twitter)</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html> 

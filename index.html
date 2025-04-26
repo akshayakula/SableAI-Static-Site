@@ -39,7 +39,12 @@
             <div class="flex items-center">
                 <img src="assets/logo.svg" alt="SablAI Logo" class="h-8 logo-img">
             </div>
-            <nav>
+            <!-- Hamburger menu button (mobile only) -->
+            <button id="mobile-menu-btn" class="md:hidden text-accent focus:outline-none text-3xl" aria-label="Open menu">
+                &#9776;
+            </button>
+            <!-- Navigation links -->
+            <nav id="main-nav" class="hidden md:block">
                 <ul class="flex space-x-6">
                     <li><a href="#how-it-works" class="hover:text-blue-400 transition-colors">How It Works</a></li>
                     <li><a href="#demo" class="hover:text-purple-400 transition-colors">Demo</a></li>
@@ -48,6 +53,15 @@
                 </ul>
             </nav>
         </div>
+        <!-- Mobile menu dropdown -->
+        <nav id="mobile-nav" class="md:hidden hidden absolute top-full left-0 w-full bg-primary/95 shadow-lg z-50">
+            <ul class="flex flex-col items-center py-4 space-y-4">
+                <li><a href="#how-it-works" class="hover:text-blue-400 transition-colors block">How It Works</a></li>
+                <li><a href="#demo" class="hover:text-purple-400 transition-colors block">Demo</a></li>
+                <li><a href="#features" class="hover:text-blue-400 transition-colors block">Features</a></li>
+                <li><a href="#contact" class="gradient-btn px-4 py-2 rounded-md block" target="_blank" rel="noopener">Get Early Access</a></li>
+            </ul>
+        </nav>
     </header>
 
     <!-- Hero Section -->
@@ -55,8 +69,12 @@
         <!-- Add dot grid pattern -->
         <div class="dot-grid" id="dotGrid"></div>
         <div class="container mx-auto px-4 z-10 text-center">
-            <h1 class="text-5xl md:text-7xl font-bold mb-4">SablAI — The Future of<br/> AI-Driven Sales Operations</h1>
-            <p class="text-xl md:text-2xl mb-8">Voice. Slack. Salesforce. Intelligence.</p>
+            <!-- Full headline for md and up -->
+            <h1 class="hidden md:block text-5xl md:text-7xl font-bold mb-4">SablAI — The Future of<br/> AI-Driven Sales Operations</h1>
+            <p class="hidden md:block text-xl md:text-2xl mb-8">Voice. Slack. Salesforce. Intelligence.</p>
+            <!-- Short headline for mobile -->
+            <h1 class="block md:hidden text-3xl font-bold mb-4">SablAI — AI Sales Ops</h1>
+            <p class="block md:hidden text-base mb-8">Voice. Slack. CRM. AI.</p>
             <div class="cta-buttons">
                 <button class="gradient-btn px-8 py-4 text-lg font-semibold hover:shadow-lg hover:shadow-blue-500/20 transition-all transform hover:scale-105" onclick="window.open('https://calendly.com/akshayakula/coffee-chat', '_blank', 'noopener')">Get Early Access</button>
             </div>
@@ -214,5 +232,19 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+    menuBtn.addEventListener('click', () => {
+        mobileNav.classList.toggle('hidden');
+    });
+    // Optional: Close menu when a link is clicked
+    mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileNav.classList.add('hidden');
+        });
+    });
+    </script>
 </body>
 </html> 

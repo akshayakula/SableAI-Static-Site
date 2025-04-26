@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SablAI — The Future of AI-Driven Sales Operations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0b0c15', /* Even darker background color like in the image */
+                        secondary: '#141729', /* Darker secondary color */
+                        highlight: '#00ADB5',
+                        accent: '#EEEEEE',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body class="bg-primary text-accent font-sans">
+    <!-- Dark overlay for more depth -->
+    <div class="dark-overlay"></div>
+    
+    <!-- Header/Navigation -->
+    <header class="fixed w-full z-50 py-4 bg-primary/90 backdrop-blur-md">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="flex items-center">
+                <img src="assets/logo.svg" alt="SablAI Logo" class="h-8">
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#how-it-works" class="hover:text-blue-400 transition-colors">How It Works</a></li>
+                    <li><a href="#demo" class="hover:text-purple-400 transition-colors">Demo</a></li>
+                    <li><a href="#features" class="hover:text-blue-400 transition-colors">Features</a></li>
+                    <li><a href="#contact" class="gradient-btn px-4 py-2 rounded-md" target="_blank" rel="noopener">Get Early Access</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <!-- Add dot grid pattern -->
+        <div class="dot-grid" id="dotGrid"></div>
+        <div class="container mx-auto px-4 z-10 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold mb-4">SablAI — The Future of<br/> AI-Driven Sales Operations</h1>
+            <p class="text-xl md:text-2xl mb-8">Voice. Slack. Salesforce. Intelligence.</p>
+            <div class="cta-buttons">
+                <button class="gradient-btn px-8 py-4 text-lg font-semibold hover:shadow-lg hover:shadow-blue-500/20 transition-all transform hover:scale-105" onclick="window.open('https://calendly.com/akshayakula/coffee-chat', '_blank', 'noopener')">Get Early Access</button>
+            </div>
+            
+            <!-- New animated waveform -->
+            <div class="exact-wave-container">
+                <canvas id="animatedWave" width="1920" height="150" style="width:100%;height:150px;display:block;"></canvas>
+            </div>
+        </div>
+        
+        <!-- Wave animation container -->
+        <div class="wave-container">
+            <div class="glowing-wave"></div>
+            <div class="glow-reflection"></div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-20 bg-secondary relative">
+        <!-- Add dot grid pattern -->
+        <div class="dot-grid" id="dotGridHow"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <h2 class="text-4xl font-bold text-center mb-16">How It Works</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="flex flex-col items-center text-center">
+                    <div class="bg-primary p-6 rounded-full mb-6 shadow-lg shadow-blue-500/10">
+                        <span class="text-4xl">🗣️</span>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2">Speak to SablAI</h3>
+                    <p class="text-accent/80">Simply talk to our AI using natural language</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <div class="bg-primary p-6 rounded-full mb-6 shadow-lg shadow-purple-500/10">
+                        <span class="text-4xl">🧠</span>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2">SablAI Thinks</h3>
+                    <p class="text-accent/80">Our AI processes your request with lightning speed</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <div class="bg-primary p-6 rounded-full mb-6 shadow-lg shadow-teal-500/10">
+                        <span class="text-4xl">☁️</span>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2">Your CRM Updates</h3>
+                    <p class="text-accent/80">Changes reflect instantly in your Salesforce</p>
+                </div>
+            </div>
+            <div class="text-center mt-16">
+                <p class="text-2xl font-light">Talk naturally. Think faster. Sell smarter.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="py-20 bg-primary relative">
+        <!-- Add dot grid pattern -->
+        <div class="dot-grid" id="dotGridDemo"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <h2 class="text-4xl font-bold text-center mb-16">See SablAI In Action</h2>
+            <div class="max-w-3xl mx-auto bg-secondary p-8 rounded-xl shadow-2xl">
+                <div class="mb-6">
+                    <audio id="demo-audio" class="w-full" controls>
+                        <!-- No actual audio file needed for demo purposes -->
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <div class="h-64 bg-primary/50 rounded-lg p-4 font-mono text-sm overflow-y-auto" id="transcription">
+                    <!-- Transcription will be dynamically added here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid Section -->
+    <section id="features" class="py-20 bg-secondary relative">
+        <!-- Add dot grid pattern -->
+        <div class="dot-grid" id="dotGridFeatures"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <h2 class="text-4xl font-bold text-center mb-16">Powerful Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-primary p-6 rounded-xl hover:transform hover:scale-105 transition-all hover:shadow-blue-500/10 hover:shadow-lg">
+                    <div class="text-blue-400 text-3xl mb-4">24/7</div>
+                    <h3 class="text-xl font-semibold mb-2">24/7 AI Availability</h3>
+                    <p class="text-accent/80">Always ready to assist your sales team, no matter the time</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-primary p-6 rounded-xl hover:transform hover:scale-105 transition-all hover:shadow-purple-500/10 hover:shadow-lg">
+                    <div class="text-purple-400 text-3xl mb-4">⚡</div>
+                    <h3 class="text-xl font-semibold mb-2">Instant CRM Updates</h3>
+                    <p class="text-accent/80">Changes reflect immediately in your Salesforce dashboard</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="bg-primary p-6 rounded-xl hover:transform hover:scale-105 transition-all hover:shadow-blue-500/10 hover:shadow-lg">
+                    <div class="text-blue-400 text-3xl mb-4">💬</div>
+                    <h3 class="text-xl font-semibold mb-2">Native Slack Experience</h3>
+                    <p class="text-accent/80">Integrates seamlessly with your team's Slack workflow</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="bg-primary p-6 rounded-xl hover:transform hover:scale-105 transition-all hover:shadow-purple-500/10 hover:shadow-lg">
+                    <div class="text-purple-400 text-3xl mb-4">🔊</div>
+                    <h3 class="text-xl font-semibold mb-2">Customizable Voices</h3>
+                    <p class="text-accent/80">Choose from a variety of natural-sounding AI voices</p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="bg-primary p-6 rounded-xl hover:transform hover:scale-105 transition-all hover:shadow-blue-500/10 hover:shadow-lg">
+                    <div class="text-blue-400 text-3xl mb-4">📊</div>
+                    <h3 class="text-xl font-semibold mb-2">Sales Acceleration Intelligence</h3>
+                    <p class="text-accent/80">Powerful analytics to boost your sales performance</p>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="bg-primary p-6 rounded-xl hover:transform hover:scale-105 transition-all hover:shadow-purple-500/10 hover:shadow-lg">
+                    <div class="text-purple-400 text-3xl mb-4">🚀</div>
+                    <h3 class="text-xl font-semibold mb-2">Built for High-Performance Teams</h3>
+                    <p class="text-accent/80">Designed for elite sales organizations that demand the best</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-20 bg-primary relative overflow-hidden">
+        <!-- Add dot grid pattern -->
+        <div class="dot-grid" id="dotGridCta"></div>
+        
+        <div class="container mx-auto px-4 z-10 relative text-center">
+            <h2 class="text-4xl font-bold mb-8">Ready to Transform Your Sales Process?</h2>
+            <button class="gradient-btn cta-btn animate-pulse-slow" onclick="window.open('https://calendly.com/akshayakula/coffee-chat', '_blank', 'noopener')">Book Your Demo Today</button>
+            <p class="mt-6 text-accent/80">Limited Beta Access Available</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 bg-secondary relative">
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <p class="text-accent/60">SablAI™ — Built for the Future.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="privacy-policy.html" class="text-accent/60 hover:text-blue-400 transition-colors">Privacy Policy</a>
+                    <a href="terms-of-use.html" class="text-accent/60 hover:text-purple-400 transition-colors">Terms of Use</a>
+                    <a href="https://www.linkedin.com/in/akshayakula/" class="text-accent/60 hover:text-blue-400 transition-colors" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://x.com/akshay_akula" class="text-accent/60 hover:text-purple-400 transition-colors" target="_blank" rel="noopener">X</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,17 @@
+<svg width="160" height="40" viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sablai-gradient" x1="0" y1="0" x2="160" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4864F3" />
+      <stop offset="0.25" stop-color="#56CCF2" />
+      <stop offset="0.5" stop-color="#847BF2" />
+      <stop offset="0.75" stop-color="#B263E4" />
+      <stop offset="1" stop-color="#D72CBC" />
+    </linearGradient>
+  </defs>
+  <g font-family="Inter, Arial, sans-serif" font-weight="bold" font-size="32">
+    <text x="0" y="32" fill="url(#sablai-gradient)">Sabl</text>
+    <text x="80" y="32" fill="url(#sablai-gradient)">AI</text>
+    <circle cx="70" cy="20" r="7" fill="url(#sablai-gradient)" opacity="0.18" />
+    <circle cx="70" cy="20" r="3" fill="url(#sablai-gradient)" />
+  </g>
+</svg> 

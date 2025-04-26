@@ -1,0 +1,13 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sablai-favicon-gradient" x1="0" y1="0" x2="64" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4864F3" />
+      <stop offset="0.25" stop-color="#56CCF2" />
+      <stop offset="0.5" stop-color="#847BF2" />
+      <stop offset="0.75" stop-color="#B263E4" />
+      <stop offset="1" stop-color="#D72CBC" />
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="28" fill="url(#sablai-favicon-gradient)" />
+  <text x="32" y="42" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="bold" fill="white">S</text>
+</svg> 

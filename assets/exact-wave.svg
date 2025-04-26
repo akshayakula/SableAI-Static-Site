@@ -1,0 +1,36 @@
+<svg width="1920" height="400" viewBox="0 0 1920 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 180 
+    C30 150 60 140 90 160
+    C120 180 150 240 180 250
+    C210 260 240 220 270 180
+    C300 140 330 120 360 140
+    C390 160 420 200 450 210
+    C480 220 510 210 540 180
+    C570 150 600 120 630 110
+    C660 100 690 120 720 150
+    C750 180 780 220 810 240
+    C840 260 870 260 900 240
+    C930 220 960 190 990 160
+    C1020 130 1050 110 1080 120
+    C1110 130 1140 160 1170 190
+    C1200 220 1230 240 1260 230
+    C1290 220 1320 180 1350 150
+    C1380 120 1410 100 1440 110
+    C1470 120 1500 150 1530 180
+    C1560 210 1590 230 1620 220
+    C1650 210 1680 180 1710 150
+    C1740 120 1770 100 1800 110
+    C1830 120 1860 170 1890 180
+    C1920 190 1950 180 1970 170" 
+    stroke="url(#blue-gradient)" stroke-width="4" stroke-linecap="round" />
+    
+  <defs>
+    <linearGradient id="blue-gradient" x1="0" y1="0" x2="1920" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4864F3" />
+      <stop offset="0.25" stop-color="#56CCF2" />
+      <stop offset="0.5" stop-color="#847BF2" />
+      <stop offset="0.75" stop-color="#B263E4" />
+      <stop offset="1" stop-color="#D72CBC" />
+    </linearGradient>
+  </defs>
+</svg> 

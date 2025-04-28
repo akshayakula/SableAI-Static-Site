@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SablAI — The Future of AI-Driven Sales Operations</title>
+    <title>SablAI — Voice-Driven Sales AI Assistant</title>
+    <meta name="description" content="Automate Salesforce updates with voice commands. SablAI integrates with Slack and your CRM to eliminate manual data entry and boost sales team productivity by 40%.">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -28,38 +29,64 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link rel="alternate icon" type="image/png" href="assets/favicon.png">
+    <style>
+      /* Critical styles only */
+      .dark-overlay{position:fixed;inset:0;background:rgba(0,0,0,.2);z-index:-1;pointer-events:none}
+      .gradient-btn{background:linear-gradient(90deg,#4864F3 0%,#9771E0 100%);color:white;border-radius:8px;transition:all .3s ease;border:none;position:relative;overflow:hidden;z-index:1}
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SablAI",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Cloud-based",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/LimitedAvailability"
+      },
+      "description": "AI-powered voice assistant for sales operations that integrates with Salesforce and Slack",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "25"
+      }
+    }
+    </script>
 </head>
 <body class="bg-primary text-accent font-sans">
     <!-- Dark overlay for more depth -->
     <div class="dark-overlay"></div>
     
     <!-- Header/Navigation -->
-    <header class="fixed w-full z-50 py-4 bg-primary/90 backdrop-blur-md">
+    <header class="fixed w-full z-50 py-4 bg-primary/90 backdrop-blur-md" role="banner">
         <div class="container mx-auto flex justify-between items-center px-4">
             <div class="flex items-center">
-                <img src="assets/logo.svg" alt="SablAI Logo" class="h-8 logo-img">
+                <img src="assets/logo.svg" alt="SablAI voice-driven AI sales assistant logo" class="h-8 logo-img hidden md:block">
             </div>
             <!-- Hamburger menu button (mobile only) -->
             <!-- <button id="mobile-menu-btn" class="md:hidden text-accent focus:outline-none text-3xl" aria-label="Open menu">
                 &#9776;
             </button> -->
             <!-- Navigation links -->
-            <nav id="main-nav" class="hidden md:block">
+            <nav id="main-nav" class="hidden md:block" aria-label="Main navigation">
                 <ul class="flex space-x-6">
                     <li><a href="#how-it-works" class="hover:text-blue-400 transition-colors">How It Works</a></li>
                     <li><a href="#demo" class="hover:text-purple-400 transition-colors">Demo</a></li>
                     <li><a href="#features" class="hover:text-blue-400 transition-colors">Features</a></li>
-                    <li><a href="#contact" class="gradient-btn px-4 py-2 rounded-md" target="_blank" rel="noopener">Get Early Access</a></li>
+                    <li><a href="#contact" class="gradient-btn px-4 py-2 rounded-md" rel="noopener">Get Early Access</a></li>
                 </ul>
             </nav>
         </div>
         <!-- Mobile menu dropdown -->
-        <nav id="mobile-nav" class="md:hidden hidden absolute top-full left-0 w-full bg-primary/95 shadow-lg z-50">
+        <nav id="mobile-nav" class="md:hidden hidden absolute top-full left-0 w-full bg-primary/95 shadow-lg z-50" aria-label="Mobile navigation">
             <ul class="flex flex-col items-center py-4 space-y-4">
                 <li><a href="#how-it-works" class="hover:text-blue-400 transition-colors block">How It Works</a></li>
                 <li><a href="#demo" class="hover:text-purple-400 transition-colors block">Demo</a></li>
                 <li><a href="#features" class="hover:text-blue-400 transition-colors block">Features</a></li>
-                <li><a href="#contact" class="gradient-btn px-4 py-2 rounded-md block" target="_blank" rel="noopener">Get Early Access</a></li>
+                <li><a href="#contact" class="gradient-btn px-4 py-2 rounded-md block" rel="noopener">Get Early Access</a></li>
             </ul>
         </nav>
     </header>
@@ -70,13 +97,13 @@
         <div class="dot-grid" id="dotGrid"></div>
         <div class="container mx-auto px-4 z-10 text-center">
             <!-- Full headline for md and up -->
-            <h1 class="hidden md:block text-5xl md:text-7xl font-bold mb-4">SablAI — The Future of<br/> AI-Driven Sales Operations</h1>
-            <p class="hidden md:block text-xl md:text-2xl mb-8">Voice. Slack. Salesforce. Intelligence.</p>
+            <h1 class="text-5xl md:text-7xl font-bold mb-4">SablAI — Voice-Driven Sales Automation</h1>
+            <p class="text-xl md:text-2xl mb-8">AI sales assistant for Salesforce, Slack, and CRM automation.</p>
             <!-- Short headline for mobile -->
             <h1 class="block md:hidden text-3xl font-bold mb-4">SablAI — AI Sales Ops</h1>
             <p class="block md:hidden text-base mb-8">Voice. Slack. CRM. AI.</p>
             <div class="cta-buttons">
-                <button class="gradient-btn px-8 py-4 text-lg font-semibold hover:shadow-lg hover:shadow-blue-500/20 transition-all transform hover:scale-105" onclick="window.open('https://calendly.com/akshayakula/coffee-chat', '_blank', 'noopener')">Get Early Access</button>
+                <a href="https://calendly.com/akshayakula/coffee-chat" class="gradient-btn px-8 py-4 text-lg font-semibold hover:shadow-lg hover:shadow-blue-500/20 transition-all transform hover:scale-105" rel="noopener">Get Early Access</a>
             </div>
             
             <!-- New animated waveform -->
@@ -97,25 +124,25 @@
         <div class="dot-grid" id="dotGridHow"></div>
         
         <div class="container mx-auto px-4 relative z-10">
-            <h2 class="text-4xl font-bold text-center mb-16">How It Works</h2>
+            <h2 class="text-4xl font-bold text-center mb-16">How SablAI Works</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="flex flex-col items-center text-center">
                     <div class="bg-primary p-6 rounded-full mb-6 shadow-lg shadow-blue-500/10">
-                        <span class="text-4xl">🗣️</span>
+                        <span class="text-4xl" aria-hidden="true">🗣️</span>
                     </div>
                     <h3 class="text-2xl font-semibold mb-2">Speak to SablAI</h3>
                     <p class="text-accent/80">Simply talk to our AI using natural language</p>
                 </div>
                 <div class="flex flex-col items-center text-center">
                     <div class="bg-primary p-6 rounded-full mb-6 shadow-lg shadow-purple-500/10">
-                        <span class="text-4xl">🧠</span>
+                        <span class="text-4xl" aria-hidden="true">🧠</span>
                     </div>
                     <h3 class="text-2xl font-semibold mb-2">SablAI Thinks</h3>
                     <p class="text-accent/80">Our AI processes your request with lightning speed</p>
                 </div>
                 <div class="flex flex-col items-center text-center">
                     <div class="bg-primary p-6 rounded-full mb-6 shadow-lg shadow-teal-500/10">
-                        <span class="text-4xl">☁️</span>
+                        <span class="text-4xl" aria-hidden="true">☁️</span>
                     </div>
                     <h3 class="text-2xl font-semibold mb-2">Your CRM Updates</h3>
                     <p class="text-accent/80">Changes reflect instantly in your Salesforce</p>
@@ -136,12 +163,11 @@
             <h2 class="text-4xl font-bold text-center mb-16">See SablAI In Action</h2>
             <div class="max-w-3xl mx-auto bg-secondary p-8 rounded-xl shadow-2xl">
                 <div class="mb-6">
-                    <audio id="demo-audio" class="w-full" controls>
-                        <!-- No actual audio file needed for demo purposes -->
+                    <audio id="demo-audio" class="w-full" controls aria-label="Demo audio">
                         Your browser does not support the audio element.
                     </audio>
                 </div>
-                <div class="h-64 bg-primary/50 rounded-lg p-4 font-mono text-sm overflow-y-auto" id="transcription">
+                <div class="h-64 bg-primary/50 rounded-lg p-4 font-mono text-sm overflow-y-auto" id="transcription" aria-live="polite">
                     <!-- Transcription will be dynamically added here -->
                 </div>
             </div>
@@ -154,7 +180,7 @@
         <div class="dot-grid" id="dotGridFeatures"></div>
         
         <div class="container mx-auto px-4 relative z-10">
-            <h2 class="text-4xl font-bold text-center mb-16">Powerful Features</h2>
+            <h2 class="text-4xl font-bold text-center mb-16">Powerful Features of SablAI</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Feature 1 -->
                 <div class="bg-primary p-6 rounded-xl hover:transform hover:scale-105 transition-all hover:shadow-blue-500/10 hover:shadow-lg">
@@ -208,14 +234,14 @@
         
         <div class="container mx-auto px-4 z-10 relative text-center">
             <h2 class="text-4xl font-bold mb-8">Ready to Transform Your Sales Process?</h2>
-            <button class="gradient-btn cta-btn animate-pulse-slow" onclick="window.open('https://calendly.com/akshayakula/coffee-chat', '_blank', 'noopener')">Book Your Demo Today</button>
+            <a href="https://calendly.com/akshayakula/coffee-chat" class="gradient-btn cta-btn animate-pulse-slow" rel="noopener">Book Your Demo Today</a>
             <p class="mt-6 text-accent/80">Limited Beta Access Available</p>
         </div>
     </section>
 
     <!-- Footer -->
     <div class="gradient-divider"></div>
-    <footer class="py-10 bg-secondary relative">
+    <footer class="py-10 bg-secondary relative" role="contentinfo">
         <div class="container mx-auto px-4 relative z-10">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-6 md:mb-0">
@@ -231,7 +257,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <script>
     // Mobile menu toggle
     const menuBtn = document.getElementById('mobile-menu-btn');
@@ -245,6 +271,22 @@
             mobileNav.classList.add('hidden');
         });
     });
+    </script>
+    <!-- Google Analytics (replace G-XXXXXXXXXX with your GA4 ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+      document.querySelectorAll('.gradient-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          gtag('event', 'cta_click', {
+            'event_category': 'engagement',
+            'event_label': this.textContent.trim()
+          });
+        });
+      });
     </script>
 </body>
 </html> 

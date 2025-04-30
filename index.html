@@ -163,7 +163,7 @@
             <h2 class="text-4xl font-bold text-center mb-16">See SablAI In Action</h2>
             <div class="max-w-3xl mx-auto bg-secondary p-8 rounded-xl shadow-2xl">
                 <div class="mb-6">
-                    <audio id="demo-audio" class="w-full" controls aria-label="Demo audio">
+                    <audio id="demo-audio" class="w-full" controls aria-label="Demo audio" src="https://storage.vapi.ai/c615a8f0-c562-4316-aa8c-cad0c1d13e24-1746052949896-e796e443-8d07-4432-8608-e93b1bfc839d-mono.wav">
                         Your browser does not support the audio element.
                     </audio>
                 </div>
@@ -271,6 +271,106 @@
             mobileNav.classList.add('hidden');
         });
     });
+
+    // Demo transcription lines
+    const transcriptionLines = [
+        "🤖 SablAI: Hello. This is a call from Sable dot ai. How are you today?",
+        "👤 Customer: Good. How are you? My name is Edward from NetWindows.",
+        "🤖 SablAI: Hi, Edward. I'm glad to hear you're doing well. I'm an AI here to assist you. At Sable AI, we help small businesses automate outreach, follow ups, and lead engagement using Salesforce and Slack.",
+        "🤖 SablAI: If you'd like to learn more about how we can support your business, I recommend visiting our website at Savlay dot com. How can I assist you today?",
+        "👤 Customer: Yeah. That sounds amazing. Thank you.",
+        "🤖 SablAI: You're very welcome, Edward. I'm glad you find it interesting. To explore how Sable AI can help your business, feel free to reach out. Remember, you can visit our website at sably dot com anytime for more information. Have a great day."
+    ];
+
+    // Type the next line
+    function typeNextLine() {
+        if (lineIndex >= transcriptionLines.length) return;
+        
+        // Create a new line element
+        const lineElement = document.createElement('div');
+        lineElement.classList.add('mb-2');
+        
+        // Determine if it's user or AI
+        const isUser = transcriptionLines[lineIndex].includes('Customer:');
+        if (isUser) {
+            lineElement.classList.add('text-accent');
+        } else {
+            // Use blue or purple for the AI text to match the new color scheme
+            lineElement.classList.add(lineIndex % 2 === 0 ? 'text-blue-400' : 'text-purple-400');
+        }
+        
+        transcription.appendChild(lineElement);
+        
+        // Type characters one by one
+        charIndex = 0;
+        typingInterval = setInterval(() => {
+            if (charIndex < transcriptionLines[lineIndex].length) {
+                lineElement.textContent = transcriptionLines[lineIndex].substring(0, charIndex + 1);
+                charIndex++;
+            } else {
+                clearInterval(typingInterval);
+                
+                // Move to next line after a delay
+                setTimeout(() => {
+                    lineIndex++;
+                    if (lineIndex < transcriptionLines.length) {
+                        typeNextLine();
+                    }
+                }, isUser ? 500 : 1000); // Longer delay for AI responses
+            }
+        }, 30); // Typing speed
+    }
+
+    // Initialize demo functionality
+    const transcription = document.getElementById('transcription');
+    const demoAudio = document.getElementById('demo-audio');
+    
+    if (transcription && demoAudio) {
+        let lineIndex = 0;
+        let charIndex = 0;
+        let isTyping = false;
+        let typingInterval;
+        
+        // Play audio and start typing simulation
+        demoAudio.addEventListener('play', () => {
+            if (!isTyping) {
+                isTyping = true;
+                transcription.innerHTML = '';
+                lineIndex = 0;
+                charIndex = 0;
+                typeNextLine();
+            }
+        });
+        
+        // Pause typing when audio is paused
+        demoAudio.addEventListener('pause', () => {
+            isTyping = false;
+            clearInterval(typingInterval);
+        });
+        
+        // Reset when audio ends
+        demoAudio.addEventListener('ended', () => {
+            isTyping = false;
+            clearInterval(typingInterval);
+        });
+        
+        // Provide a button to demo without audio
+        const demoButton = document.createElement('button');
+        demoButton.textContent = 'Play Demo Transcript';
+        demoButton.className = 'gradient-btn mt-4 px-4 py-2 rounded text-sm';
+        demoButton.addEventListener('click', () => {
+            if (!isTyping) {
+                isTyping = true;
+                transcription.innerHTML = '';
+                lineIndex = 0;
+                charIndex = 0;
+                typeNextLine();
+            }
+        });
+        
+        // Insert the button after the audio element
+        demoAudio.parentNode.appendChild(demoButton);
+    }
     </script>
     <!-- Google Analytics (replace G-XXXXXXXXXX with your GA4 ID) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>

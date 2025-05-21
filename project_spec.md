@@ -1,138 +1,179 @@
-# 🛠️ SablAI Landing Page (Vanilla HTML + Tailwind + Waveform Animation Spec)
+# 🛠️ SablAI V2 – Project Spec (Vanilla JS / HTML / CSS Website)
 
-## Overview
-Create a **static marketing landing page** using **pure HTML + TailwindCSS via CDN** + **vanilla JavaScript** for lightweight animations.  
-Goal: Showcase SablAI as the future of voice-driven AI for Salesforce + Slack.
+## 🔥 Overview
 
----
+SablAI is an AI-powered voice automation platform designed for support and service ops. It helps MSPs, enterprises, and government teams manage inbound calls, triage issues, and automate ticket creation in tools like Jira and Salesforce — all through intelligent voice agents.
 
-## 🎨 Branding and Theme
-
-- **Primary Background Color:** `#222831`
-- **Secondary Background Color:** `#393E46`
-- **Highlight Color:** `#00ADB5`
-- **Accent Color:** `#EEEEEE`
-
-- **Vibe:**  
-  Futuristic × Smooth × Lightning Speed × Elite AI Consulting
-
-- **Animations:**  
-  - Subtle voice waveform animation in the Hero section  
-  - Smooth fade-ins and hover effects
-  - All animations purely visual (no backend or real-time audio capture)
+This project spec outlines the website structure, feature set, product offerings, animations, and compliance positioning for SablAI V2.
 
 ---
 
-## 🛠 Tech Stack
+## 🌐 Website Structure
 
-- **HTML5** for structure
-- **TailwindCSS** via CDN for styling
-- **Vanilla JavaScript** for:
-  - Waveform animation (fake/looped)
-  - Typing simulation for demo section
-  - Basic scroll animations (optional)
-- **Host on:** Vercel, Netlify, or GitHub Pages
-
----
-
-## 🧱 Page Structure
-
-### 1. Hero Section
-- **Big Headline:**  
-  > "SablAI — The Future of AI-Driven Sales Operations"
-- **Subheadline:**  
-  > "Voice. Slack. Salesforce. Intelligence."
-- **Primary CTA Button:**  
-  > "Get Early Access"
-- **Background Animation:**  
-  - Light **animated waveform** behind or below the hero text.  
-  - Implement using a small canvas library (like [Wave.js](https://github.com/foobar404/wave.js)) or a custom SVG animation with Framer Motion or vanilla JS.  
-  - Animation loops forever, slow and elegant.
+1. Hero Section
+2. Product Offerings Grid (8 total)
+3. Security & Compliance Section
+4. Integrations Section (Slack, Salesforce, Jira)
+5. Book a Demo CTA
+6. Footer
 
 ---
 
-### 2. How It Works Section
-- **3 Steps, each with Icon + Label:**
-  - 🗣️ **Speak to SablAI**
-  - 🧠 **SablAI Thinks**
-  - ☁️ **Your CRM Updates**
-- **Short Description:**  
-  > "Talk naturally. Think faster. Sell smarter."
+## 💡 Hero Section
+
+**Headline:**  
+*“AI voice agents for support and public sector ops.”*
+
+**Subhead:**  
+*“Handle inbound calls, triage issues, and create Jira tickets — all without picking up the phone.”*
+
+**CTA:**  
+“Book a Demo”
 
 ---
 
-### 3. Demo Section
-- **Audio Player Embed:**  
-  Play a pre-recorded AI call audio clip (20 seconds).
-- **Animated Typing Simulation:**  
-  While the audio plays, display "fake" live transcription text scrolling line-by-line.
-- **Section Title:**  
-  > "See SablAI In Action"
+## 📦 Product Offerings
+
+### 1. Voice-to-Ticket AI  
+**Tagline:**  
+"Turn every call into a structured ticket — no rep required."  
+**Summary:**  
+Automatically answers inbound service calls, understands the issue, and creates a Jira ticket with full summary and transcript. Runs 24/7 and requires no manual triage.
 
 ---
 
-### 4. Features Grid Section
-- **Grid of 6 Features:**
-  - 24/7 AI Availability
-  - Instant CRM Updates
-  - Native Slack Experience
-  - Customizable Voices
-  - Sales Acceleration Intelligence
-  - Built for High-Performance Teams
+### 2. Outbound Voice Campaigns  
+**Tagline:**  
+"Follow up with leads and collect feedback — automatically."  
+**Summary:**  
+Send outbound calls with AI agents for post-sale follow-ups, feedback, or check-ins. Data syncs to Salesforce or Jira.
 
 ---
 
-### 5. CTA Section
-- **Big glowing CTA Button:**  
-  > "Book Your Demo Today"
-- **Subtext:**  
-  > "Limited Beta Access Available"
-
-- Optional subtle animated glow behind the button.
+### 3. Jira + JSM Integration  
+**Tagline:**  
+"AI-powered front line for Atlassian Service Management."  
+**Summary:**  
+Native integration with Jira and Jira Service Management for seamless ticket creation and routing from voice input.
 
 ---
 
-### 6. Footer
-- **Links:**
-  - Privacy Policy
-  - Terms of Use
-  - LinkedIn
-  - Twitter
-- **Subtle note:**  
-  > "SablAI™ — Built for the Future."
+### 4. Salesforce Integration  
+**Tagline:**  
+"Update leads and log calls — with no human effort."  
+**Summary:**  
+SablAI automatically logs AI call summaries, updates CRM records, and can trigger Salesforce flows based on intent.
 
 ---
 
-## 🎯 Key Rules
-
-✅ No backend interaction needed  
-✅ Only marketing storytelling  
-✅ Super lightweight  
-✅ Static animations only  
-✅ Instant page load (small bundle size)
+### 5. Silent Voicemails (Ringless Drops)  
+**Tagline:**  
+"Land in the inbox, not the missed call list."  
+**Summary:**  
+Drop customized AI voicemails directly into customer inboxes. Perfect for automated follow-ups or cold outreach.
 
 ---
 
-## 📝 Deliverables
-
-- `/index.html`
-- `/assets/`
-  - logo
-  - SVGs for icons
-  - waveform animation assets if needed
-  - audio sample
-- `/script.js`  
-  (for animating waveform + typing text)
-- `/style.css` (only if overriding Tailwind defaults)
+### 6. Slack Integration  
+**Tagline:**  
+"Bring AI call insights into your daily ops."  
+**Summary:**  
+Send summaries, action items, and real-time alerts into Slack threads and channels.
 
 ---
 
-## 🔥 Bonus Touches (Optional)
-
-- Scroll-triggered fade-in of sections
-- Typing speed adjustable with a setting
-- Button hover effects using Tailwind transitions
-- Slight glowing animated background for sections
-- Static starfield or particle background (very subtle)
+### 7. Custom Voice Agent  
+**Tagline:**  
+"Trained on your playbook. Speaks your tone."  
+**Summary:**  
+Fully customizable prompts, flows, voice persona, and routing logic. Tailored to your team's support or sales ops.
 
 ---
+
+### 8. HIPAA & IL2-Ready Secure Voice  
+**Tagline:**  
+"Compliance-driven conversations without compromise."  
+**Summary:**  
+HIPAA-ready call flows and DoD IL2-aligned deployment support for public sector or health-focused clients.
+
+---
+
+## 🧠 Platform Capabilities (All AI-Powered)
+
+- Real-time transcription and summarization
+- Intent and sentiment analysis
+- Smart call routing
+- SLA-aware prioritization
+- Multilingual voice support (optional roadmap)
+
+---
+
+## 🔒 Security & Compliance
+
+**Claimed & Backed Standards:**
+
+- HIPAA-Ready Voice Flows
+- DoD IL2-Aligned Deployment
+- SOC 2-Ready Infrastructure (hosted on certified cloud)
+- FedRAMP-Inspired Architecture (designed for future public sector compliance)
+
+---
+
+## 🔌 Integrations
+
+- Jira Service Management (native app)
+- Salesforce CRM
+- Slack (real-time threads + summaries)
+- Vapi.ai (voice layer)
+- Optional: AWS GovCloud deployments
+
+---
+
+## 🎨 Animation Ideas (For Vanilla JS + CSS)
+
+| Feature                    | Animation Idea |
+|---------------------------|----------------|
+| Voice-to-Ticket AI        | Waveform animates on hover |
+| Outbound Voice Campaigns  | Icon slides in, fades to transcript |
+| Jira Integration          | Ticket stamp effect |
+| Salesforce Integration    | Card flip to CRM view |
+| Slack Integration         | Message bubble slides in |
+| Compliance Badges         | Fade + bounce on scroll |
+| Custom Agent              | Animated voice waveform scroll-in |
+| Demo CTA                  | Pulse button on idle |
+
+---
+
+## 📅 Demo CTA
+
+**Copy:**  
+"See SablAI in action. Book a 15-minute demo and experience hands-free ticket creation, live."
+
+---
+
+## 🧼 Footer
+
+**Line:**  
+“© 2025 SablAI. Built by engineers, for real-world operations.”
+
+**Contact:**  
+[founder@sabl.ai](mailto:founder@sabl.ai)
+
+---
+
+## ✅ Dev Stack
+
+- Vanilla JS
+- HTML5
+- CSS3 (no framework)
+- Hosting: Netlify or Vercel
+- Markdown docs: `projectspec.md`, `security.md`, `demo-script.md`
+
+---
+
+## 🧭 Next Steps
+
+1. Build static site structure in HTML
+2. Animate offerings via scroll/hover using IntersectionObserver + CSS keyframes
+3. Hook demo CTA to Calendly or email
+4. Launch MVP landing site for Offset Symposium demo bookings

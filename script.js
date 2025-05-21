@@ -206,14 +206,14 @@ function initTypingDemo() {
   
   // Demo transcription lines
   const transcriptionLines = [
-    "User: Hey SablAI, can you update the status of the Acme Corp deal to 'Closing'?",
-    "SablAI: I'll update the Acme Corp opportunity status to 'Closing'. Is there a closing date you'd like to set?",
-    "User: Yes, let's set it for next Friday",
-    "SablAI: Great! I've updated the Acme Corp opportunity to 'Closing' with a close date of next Friday, April 28th. Is there anything else you'd like me to update?",
-    "User: Add a note that they've signed the MSA",
-    "SablAI: Added a note to the Acme Corp opportunity: 'Customer has signed the Master Service Agreement'. The record has been updated in Salesforce.",
-    "User: Thanks SablAI!",
-    "SablAI: You're welcome! Is there anything else you need help with today?"
+    "User: Hi, we're having an issue with our server. It's been down for about 30 minutes now.",
+    "SablAI: I understand that your server is down, which is a critical issue. Can you provide me with your company name and which server is affected?",
+    "User: Yes, this is Acme Corp and it's our production database server DB-PROD-03.",
+    "SablAI: Thank you. I'm creating a Priority 1 ticket in Jira for the production database server DB-PROD-03 outage for Acme Corp. A support engineer will be notified immediately. Do you have any additional details to add to the ticket?",
+    "User: We were doing some routine maintenance earlier, if that helps.",
+    "SablAI: I've added that context to the ticket. Your ticket number is ACM-1234. A support engineer will contact you within 15 minutes as per our SLA. You'll receive an email confirmation shortly with the ticket details. Is there anything else I can help with?",
+    "User: No, that's all. Thank you.",
+    "SablAI: Thank you for contacting support. A notification has been sent to the on-call team, and your ticket has been successfully created with all details. Have a good day."
   ];
   
   let lineIndex = 0;
@@ -473,4 +473,37 @@ function animateWaveform() {
     requestAnimationFrame(draw);
   }
   requestAnimationFrame(draw);
+}
+
+// SVG Drawing Animation
+function animateSVGs() {
+    const svgIcons = document.querySelectorAll('.svg-icon');
+    svgIcons.forEach(icon => {
+        const paths = icon.querySelectorAll('path, circle, rect, ellipse');
+        paths.forEach(path => {
+            if (path.getTotalLength) {
+                const length = path.getTotalLength();
+                path.style.strokeDasharray = length;
+                path.style.strokeDashoffset = length;
+                setTimeout(() => {
+                    path.style.transition = 'stroke-dashoffset 2s cubic-bezier(0.4,0,0.2,1)';
+                    path.style.strokeDashoffset = '0';
+                }, 100);
+            }
+        });
+    });
+}
+
+// Animate SVGs when features section is visible
+const featuresSection = document.getElementById('features');
+if (featuresSection) {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateSVGs();
+                observer.disconnect();
+            }
+        });
+    }, { threshold: 0.2 });
+    observer.observe(featuresSection);
 } 

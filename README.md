@@ -2,6 +2,10 @@
 
 A static marketing landing page for SablAI, built with vanilla HTML, TailwindCSS, and JavaScript.
 
+## Overview
+
+SablAI is an AI-powered voice automation platform designed for support and service ops. It helps MSPs, enterprises, and government teams manage inbound calls, triage issues, and automate ticket creation in tools like Jira and Salesforce — all through intelligent voice agents.
+
 ## Technologies Used
 
 - HTML5 for structure
@@ -63,4 +67,4 @@ This site can be easily deployed to:
 
 ## License
 
-&copy; 2023 SablAI. All rights reserved. 
+© 2023 SablAI. All rights reserved.

@@ -95,61 +95,103 @@
     <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
         <!-- Add dot grid pattern -->
         <div class="dot-grid" id="dotGrid"></div>
+        </div>
         <div class="container mx-auto px-4 z-10 text-center">
             <!-- Full headline for md and up -->
-            <h1 class="text-5xl md:text-7xl font-bold mb-4">SablAI — Voice-Driven Sales Automation</h1>
-            <p class="text-xl md:text-2xl mb-8">AI sales assistant for Salesforce, Slack, and CRM automation.</p>
-            <!-- Short headline for mobile -->
-            <h1 class="block md:hidden text-3xl font-bold mb-4">SablAI — AI Sales Ops</h1>
-            <p class="block md:hidden text-base mb-8">Voice. Slack. CRM. AI.</p>
-            <div class="cta-buttons">
-                <a href="https://calendly.com/akshayakula/coffee-chat" class="gradient-btn px-8 py-4 text-lg font-semibold hover:shadow-lg hover:shadow-blue-500/20 transition-all transform hover:scale-105" rel="noopener">Get Early Access</a>
+            <h1 class="hidden md:block text-5xl md:text-7xl font-bold mb-4">Voice Driven Support Automation</h1>
+            <!-- Award Badges integrated below headline -->
+            <div class="award-badges-hero hidden md:flex flex-row flex-wrap gap-3 justify-center items-center mb-6">
+              <div class="award-badge flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white text-sm font-semibold shadow-lg" style="color:#EEEEEE;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="svg-icon"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M8 12l2.5 2.5L16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Built by the team behind Atlassian Codegeist 2022 Best IT App
+              </div>
             </div>
-            
-            <!-- New animated waveform -->
-            <div class="exact-wave-container">
-                <canvas id="animatedWave" width="1920" height="150" style="width:100%;height:150px;display:block;"></canvas>
+            <p class="hidden md:block text-xl md:text-2xl mb-8">Handle inbound calls, triage issues, and create tickets — all without picking up the phone. Integrates with Salesforce, Jira, and more.</p>
+            <!-- Short headline for mobile -->
+            <h1 class="block md:hidden text-3xl font-bold mb-4">SablAI</h1>
+            <p class="block md:hidden text-base mb-8">Voice AI powered automation for support, triage, and ticketing.</p>
+            <div class="cta-buttons">
+                <a href="https://calendly.com/akshayakula/coffee-chat" class="gradient-btn px-8 py-4 text-lg font-semibold hover:shadow-lg hover:shadow-blue-500/20 transition-all transform hover:scale-105" rel="noopener">Book a Demo</a>
             </div>
         </div>
-        
-        <!-- Wave animation container -->
-        <!-- <div class="wave-container">
-            <div class="glow-reflection"></div>
-        </div> -->
+        <!-- New animated waveform: move up so it doesn't get cut off -->
+        <div class="exact-wave-container" style="position:absolute;left:0;right:0;bottom:5vh;width:100vw;max-width:100vw;z-index:0;">
+            <canvas id="animatedWave" width="1920" height="150" style="width:100vw;height:150px;display:block;"></canvas>
+        </div>
     </section>
 
-    <!-- How It Works Section -->
-    <section id="how-it-works" class="py-20 bg-secondary relative">
-        <!-- Add dot grid pattern -->
-        <div class="dot-grid" id="dotGridHow"></div>
-        
+    <!-- Features Grid Section -->
+    <section id="features" class="py-20 bg-secondary relative">
+        <div class="dot-grid" id="dotGridFeatures"></div>
         <div class="container mx-auto px-4 relative z-10">
-            <h2 class="text-4xl font-bold text-center mb-16">How SablAI Works</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="flex flex-col items-center text-center">
-                    <div class="bg-primary p-6 rounded-full mb-6 shadow-lg shadow-blue-500/10">
-                        <span class="text-4xl" aria-hidden="true">🗣️</span>
+            <h2 class="text-4xl font-bold text-center mb-16">Powerful Features of SablAI</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-primary p-6 rounded-xl hover:transform hover:scale-105 transition-all hover:shadow-blue-500/10 hover:shadow-lg flex flex-col items-center">
+                    <div class="feature-icon mb-4" style="color:#EEEEEE;">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" class="svg-icon">
+                            <rect x="9" y="2" width="6" height="12" rx="3" stroke="currentColor" stroke-width="2"/>
+                            <path d="M5 10v2a7 7 0 0 0 14 0v-2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 19v3" stroke="currentColor" stroke-width="2"/>
+                            <path d="M8 22h8" stroke="currentColor" stroke-width="2"/>
+                        </svg>
                     </div>
-                    <h3 class="text-2xl font-semibold mb-2">Speak to SablAI</h3>
-                    <p class="text-accent/80">Simply talk to our AI using natural language</p>
+                    <h3 class="text-xl font-semibold mb-2">Voice-to-Ticket AI</h3>
+                    <p class="text-accent/80">Turn every call into a structured ticket — no rep required</p>
                 </div>
-                <div class="flex flex-col items-center text-center">
-                    <div class="bg-primary p-6 rounded-full mb-6 shadow-lg shadow-purple-500/10">
-                        <span class="text-4xl" aria-hidden="true">🧠</span>
+                <!-- Feature 2 -->
+                <div class="bg-primary p-6 rounded-xl hover:transform hover:scale-105 transition-all hover:shadow-purple-500/10 hover:shadow-lg flex flex-col items-center">
+                    <div class="feature-icon mb-4" style="color:#EEEEEE;">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" class="svg-icon">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.72 19.72 0 0 1 3.09 5.18 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.34a2 2 0 0 1-.45 2.11l-1.27 1.27a16 16 0 0 0 6.29 6.29l1.27-1.27a2 2 0 0 1 2.11-.45c.74.34 1.53.57 2.34.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                     </div>
-                    <h3 class="text-2xl font-semibold mb-2">SablAI Thinks</h3>
-                    <p class="text-accent/80">Our AI processes your request with lightning speed</p>
+                    <h3 class="text-xl font-semibold mb-2">Outbound Voice Campaigns</h3>
+                    <p class="text-accent/80">Follow up with leads and collect feedback — automatically</p>
                 </div>
-                <div class="flex flex-col items-center text-center">
-                    <div class="bg-primary p-6 rounded-full mb-6 shadow-lg shadow-teal-500/10">
-                        <span class="text-4xl" aria-hidden="true">☁️</span>
+                <!-- Feature 3 -->
+                <div class="bg-primary p-6 rounded-xl hover:transform hover:scale-105 transition-all hover:shadow-blue-500/10 hover:shadow-lg flex flex-col items-center">
+                    <div class="feature-icon mb-4" style="color:#EEEEEE;">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" class="svg-icon">
+                            <rect x="3" y="7" width="18" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M7 12l3 3 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                     </div>
-                    <h3 class="text-2xl font-semibold mb-2">Your CRM Updates</h3>
-                    <p class="text-accent/80">Changes reflect instantly in your Salesforce</p>
+                    <h3 class="text-xl font-semibold mb-2">Jira + JSM Integration</h3>
+                    <p class="text-accent/80">AI-powered front line for Atlassian Service Management</p>
                 </div>
-            </div>
-            <div class="text-center mt-16">
-                <p class="text-2xl font-light">Talk naturally. Think faster. Sell smarter.</p>
+                <!-- Feature 4 -->
+                <div class="bg-primary p-6 rounded-xl hover:transform hover:scale-105 transition-all hover:shadow-purple-500/10 hover:shadow-lg flex flex-col items-center">
+                    <div class="feature-icon mb-4" style="color:#EEEEEE;">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" class="svg-icon">
+                            <path d="M17.5 19a4.5 4.5 0 0 0 0-9c-.2 0-.4 0-.6.03A6 6 0 1 0 6 17.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Salesforce Integration</h3>
+                    <p class="text-accent/80">Update leads and log calls — with no human effort</p>
+                </div>
+                <!-- Feature 5 -->
+                <div class="bg-primary p-6 rounded-xl hover:transform hover:scale-105 transition-all hover:shadow-blue-500/10 hover:shadow-lg flex flex-col items-center">
+                    <div class="feature-icon mb-4" style="color:#EEEEEE;">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" class="svg-icon">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">HIPAA & IL2-Ready</h3>
+                    <p class="text-accent/80">Compliance-driven conversations without compromise</p>
+                </div>
+                <!-- Feature 6 -->
+                <div class="bg-primary p-6 rounded-xl hover:transform hover:scale-105 transition-all hover:shadow-purple-500/10 hover:shadow-lg flex flex-col items-center">
+                    <div class="feature-icon mb-4" style="color:#EEEEEE;">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" class="svg-icon">
+                            <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/>
+                            <path d="M2 20c0-4 8-6 10-6s10 2 10 6v2H2v-2z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M16 8c0 2-4 2-4 0" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Custom Voice Agent</h3>
+                    <p class="text-accent/80">Trained on your playbook. Speaks your tone.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -174,55 +216,51 @@
         </div>
     </section>
 
-    <!-- Features Grid Section -->
-    <section id="features" class="py-20 bg-secondary relative">
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-20 bg-secondary relative">
         <!-- Add dot grid pattern -->
-        <div class="dot-grid" id="dotGridFeatures"></div>
+        <div class="dot-grid" id="dotGridHow"></div>
         
         <div class="container mx-auto px-4 relative z-10">
-            <h2 class="text-4xl font-bold text-center mb-16">Powerful Features of SablAI</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="bg-primary p-6 rounded-xl hover:transform hover:scale-105 transition-all hover:shadow-blue-500/10 hover:shadow-lg">
-                    <div class="text-blue-400 text-3xl mb-4">24/7</div>
-                    <h3 class="text-xl font-semibold mb-2">24/7 AI Availability</h3>
-                    <p class="text-accent/80">Always ready to assist your sales team, no matter the time</p>
+            <h2 class="text-4xl font-bold text-center mb-16">How SablAI Works</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="flex flex-col items-center text-center">
+                    <!-- Step 1: Headset -->
+                    <div class="bg-primary p-6 rounded-full mb-6 shadow-lg shadow-blue-500/10 flex items-center justify-center" style="color:#EEEEEE;">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" class="svg-icon">
+                            <path d="M4 15v-3a8 8 0 0 1 16 0v3" stroke="currentColor" stroke-width="2"/>
+                            <rect x="2" y="15" width="4" height="6" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <rect x="18" y="15" width="4" height="6" rx="2" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2">AI Answers Call</h3>
+                    <p class="text-accent/80">Our AI voice agents automatically handle incoming support calls</p>
                 </div>
-                
-                <!-- Feature 2 -->
-                <div class="bg-primary p-6 rounded-xl hover:transform hover:scale-105 transition-all hover:shadow-purple-500/10 hover:shadow-lg">
-                    <div class="text-purple-400 text-3xl mb-4">⚡</div>
-                    <h3 class="text-xl font-semibold mb-2">Instant CRM Updates</h3>
-                    <p class="text-accent/80">Changes reflect immediately in your Salesforce dashboard</p>
+                <div class="flex flex-col items-center text-center">
+                    <!-- Step 2: Brain/AI -->
+                    <div class="bg-primary p-6 rounded-full mb-6 shadow-lg shadow-purple-500/10 flex items-center justify-center" style="color:#EEEEEE;">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" class="svg-icon">
+                            <path d="M12 2a7 7 0 0 1 7 7v2a7 7 0 0 1-7 7 7 7 0 0 1-7-7V9a7 7 0 0 1 7-7z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M9 9h6M9 13h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2">Triage and Understand</h3>
+                    <p class="text-accent/80">AI analyzes the issue and collects necessary information</p>
                 </div>
-                
-                <!-- Feature 3 -->
-                <div class="bg-primary p-6 rounded-xl hover:transform hover:scale-105 transition-all hover:shadow-blue-500/10 hover:shadow-lg">
-                    <div class="text-blue-400 text-3xl mb-4">💬</div>
-                    <h3 class="text-xl font-semibold mb-2">Native Slack Experience</h3>
-                    <p class="text-accent/80">Integrates seamlessly with your team's Slack workflow</p>
+                <div class="flex flex-col items-center text-center">
+                    <!-- Step 3: Cloud/Check -->
+                    <div class="bg-primary p-6 rounded-full mb-6 shadow-lg shadow-teal-500/10 flex items-center justify-center" style="color:#EEEEEE;">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" class="svg-icon">
+                            <path d="M17.5 19a4.5 4.5 0 0 0 0-9c-.2 0-.4 0-.6.03A6 6 0 1 0 6 17.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 16l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2">Create Tickets</h3>
+                    <p class="text-accent/80">Issues are instantly created in Jira or Salesforce</p>
                 </div>
-                
-                <!-- Feature 4 -->
-                <div class="bg-primary p-6 rounded-xl hover:transform hover:scale-105 transition-all hover:shadow-purple-500/10 hover:shadow-lg">
-                    <div class="text-purple-400 text-3xl mb-4">🔊</div>
-                    <h3 class="text-xl font-semibold mb-2">Customizable Voices</h3>
-                    <p class="text-accent/80">Choose from a variety of natural-sounding AI voices</p>
-                </div>
-                
-                <!-- Feature 5 -->
-                <div class="bg-primary p-6 rounded-xl hover:transform hover:scale-105 transition-all hover:shadow-blue-500/10 hover:shadow-lg">
-                    <div class="text-blue-400 text-3xl mb-4">📊</div>
-                    <h3 class="text-xl font-semibold mb-2">Sales Acceleration Intelligence</h3>
-                    <p class="text-accent/80">Powerful analytics to boost your sales performance</p>
-                </div>
-                
-                <!-- Feature 6 -->
-                <div class="bg-primary p-6 rounded-xl hover:transform hover:scale-105 transition-all hover:shadow-purple-500/10 hover:shadow-lg">
-                    <div class="text-purple-400 text-3xl mb-4">🚀</div>
-                    <h3 class="text-xl font-semibold mb-2">Built for High-Performance Teams</h3>
-                    <p class="text-accent/80">Designed for elite sales organizations that demand the best</p>
-                </div>
+            </div>
+            <div class="text-center mt-16">
+                <p class="text-2xl font-light">Automate calls. Streamline support. Scale operations.</p>
             </div>
         </div>
     </section>
@@ -233,7 +271,7 @@
         <div class="dot-grid" id="dotGridCta"></div>
         
         <div class="container mx-auto px-4 z-10 relative text-center">
-            <h2 class="text-4xl font-bold mb-8">Ready to Transform Your Sales Process?</h2>
+            <h2 class="text-4xl font-bold mb-8">See SablAI in action. Experience hands-free ticket creation, live.</h2>
             <a href="https://calendly.com/akshayakula/coffee-chat" class="gradient-btn cta-btn animate-pulse-slow" rel="noopener">Book Your Demo Today</a>
             <p class="mt-6 text-accent/80">Limited Beta Access Available</p>
         </div>
@@ -245,7 +283,7 @@
         <div class="container mx-auto px-4 relative z-10">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-6 md:mb-0">
-                    <p class="text-accent/60">SablAI™ — Built for the Future.</p>
+                    <p class="text-accent/60">SablAI™ — Built by engineers, for real-world operations.</p>
                 </div>
                 <div class="flex space-x-6">
                     <a href="privacy-policy.html" class="text-accent/60 hover:text-blue-400 transition-colors">Privacy Policy</a>
@@ -274,12 +312,15 @@
 
     // Demo transcription lines
     const transcriptionLines = [
-        "🤖 SablAI: Hello. This is a call from Sable dot ai. How are you today?",
-        "👤 Customer: Good. How are you? My name is Edward from NetWindows.",
-        "🤖 SablAI: Hi, Edward. I'm glad to hear you're doing well. I'm an AI here to assist you. At Sable AI, we help small businesses automate outreach, follow ups, and lead engagement using Salesforce and Slack.",
-        "🤖 SablAI: If you'd like to learn more about how we can support your business, I recommend visiting our website at Savlay dot com. How can I assist you today?",
-        "👤 Customer: Yeah. That sounds amazing. Thank you.",
-        "🤖 SablAI: You're very welcome, Edward. I'm glad you find it interesting. To explore how Sable AI can help your business, feel free to reach out. Remember, you can visit our website at sably dot com anytime for more information. Have a great day."
+        "🤖 SablAI: Thank you for calling support. This is an AI voice agent from SablAI. How can I help you today?",
+        "👤 Customer: Hi, we're having an issue with our server. It's been down for about 30 minutes now.",
+        "🤖 SablAI: I understand that your server is down, which is a critical issue. Can you provide me with your company name and which server is affected?",
+        "👤 Customer: Yes, this is Acme Corp and it's our production database server DB-PROD-03.",
+        "🤖 SablAI: Thank you. I'm creating a Priority 1 ticket in Jira for the production database server DB-PROD-03 outage for Acme Corp. A support engineer will be notified immediately. Do you have any additional details to add to the ticket?",
+        "👤 Customer: We were doing some routine maintenance earlier, if that helps.",
+        "🤖 SablAI: I've added that context to the ticket. Your ticket number is ACM-1234. A support engineer will contact you within 15 minutes as per our SLA. You'll receive an email confirmation shortly with the ticket details. Is there anything else I can help with?",
+        "👤 Customer: No, that's all. Thank you.",
+        "🤖 SablAI: Thank you for contacting support. A notification has been sent to the on-call team, and your ticket has been successfully created with all details. Have a good day."
     ];
 
     // Type the next line

@@ -1,10 +1,10 @@
-# 🛠️ SablAI V2 – Project Spec (Vanilla JS / HTML / CSS Website)
+# 🛠️ Vonar AI V2 – Project Spec (Vanilla JS / HTML / CSS Website)
 
 ## 🔥 Overview
 
-SablAI is an AI-powered voice automation platform designed for support and service ops. It helps MSPs, enterprises, and government teams manage inbound calls, triage issues, and automate ticket creation in tools like Jira and Salesforce — all through intelligent voice agents.
+Vonar AI is an AI-powered voice automation platform designed for support and service ops. It helps MSPs, enterprises, and government teams manage inbound calls, triage issues, and automate ticket creation in tools like Jira and Salesforce — all through intelligent voice agents.
 
-This project spec outlines the website structure, feature set, product offerings, animations, and compliance positioning for SablAI V2.
+This project spec outlines the website structure, feature set, product offerings, animations, and compliance positioning for Vonar AI V2.
 
 ---
 
@@ -28,7 +28,7 @@ This project spec outlines the website structure, feature set, product offerings
 *“Handle inbound calls, triage issues, and create Jira tickets — all without picking up the phone.”*
 
 **CTA:**  
-“Book a Demo”
+"Book a Demo"
 
 ---
 
@@ -62,7 +62,7 @@ Native integration with Jira and Jira Service Management for seamless ticket cre
 **Tagline:**  
 "Update leads and log calls — with no human effort."  
 **Summary:**  
-SablAI automatically logs AI call summaries, updates CRM records, and can trigger Salesforce flows based on intent.
+Vonar AI automatically logs AI call summaries, updates CRM records, and can trigger Salesforce flows based on intent.
 
 ---
 
@@ -147,17 +147,17 @@ HIPAA-ready call flows and DoD IL2-aligned deployment support for public sector 
 ## 📅 Demo CTA
 
 **Copy:**  
-"See SablAI in action. Book a 15-minute demo and experience hands-free ticket creation, live."
+"See Vonar AI in action. Book a 15-minute demo and experience hands-free ticket creation, live."
 
 ---
 
 ## 🧼 Footer
 
 **Line:**  
-“© 2025 SablAI. Built by engineers, for real-world operations.”
+"© 2025 Vonar AI. Built by engineers, for real-world operations."
 
 **Contact:**  
-[founder@sabl.ai](mailto:founder@sabl.ai)
+[founder@vonar.com](mailto:founder@vonar.com)
 
 ---
 

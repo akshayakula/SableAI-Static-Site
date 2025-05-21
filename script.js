@@ -207,13 +207,13 @@ function initTypingDemo() {
   // Demo transcription lines
   const transcriptionLines = [
     "User: Hi, we're having an issue with our server. It's been down for about 30 minutes now.",
-    "SablAI: I understand that your server is down, which is a critical issue. Can you provide me with your company name and which server is affected?",
+    "Vonar AI: I understand that your server is down, which is a critical issue. Can you provide me with your company name and which server is affected?",
     "User: Yes, this is Acme Corp and it's our production database server DB-PROD-03.",
-    "SablAI: Thank you. I'm creating a Priority 1 ticket in Jira for the production database server DB-PROD-03 outage for Acme Corp. A support engineer will be notified immediately. Do you have any additional details to add to the ticket?",
+    "Vonar AI: Thank you. I'm creating a Priority 1 ticket in Jira for the production database server DB-PROD-03 outage for Acme Corp. A support engineer will be notified immediately. Do you have any additional details to add to the ticket?",
     "User: We were doing some routine maintenance earlier, if that helps.",
-    "SablAI: I've added that context to the ticket. Your ticket number is ACM-1234. A support engineer will contact you within 15 minutes as per our SLA. You'll receive an email confirmation shortly with the ticket details. Is there anything else I can help with?",
+    "Vonar AI: I've added that context to the ticket. Your ticket number is ACM-1234. A support engineer will contact you within 15 minutes as per our SLA. You'll receive an email confirmation shortly with the ticket details. Is there anything else I can help with?",
     "User: No, that's all. Thank you.",
-    "SablAI: Thank you for contacting support. A notification has been sent to the on-call team, and your ticket has been successfully created with all details. Have a good day."
+    "Vonar AI: Thank you for contacting support. A notification has been sent to the on-call team, and your ticket has been successfully created with all details. Have a good day."
   ];
   
   let lineIndex = 0;

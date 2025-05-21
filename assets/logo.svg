@@ -8,16 +8,16 @@
       <stop offset="1" stop-color="#D72CBC" />
     </linearGradient>
   </defs>
-  <!-- White text for SablAI -->
+  <!-- White text for Vonar -->
   <g font-family="Inter, Arial, sans-serif" font-weight="700" font-size="36" letter-spacing="1">
-    <text x="0" y="40" fill="#fff">SablAI</text>
+    <text x="0" y="40" fill="#fff">Vonar</text>
   </g>
-  <!-- Larger, more visible waveform bars with gradient -->
+  <!-- Larger, more visible waveform bars with gradient, moved closer to text -->
   <g>
-    <rect x="150" y="10" width="8" height="36" rx="4" fill="url(#waveform-gradient)"/>
-    <rect x="164" y="4" width="8" height="48" rx="4" fill="url(#waveform-gradient)"/>
-    <rect x="178" y="18" width="8" height="20" rx="4" fill="url(#waveform-gradient)"/>
-    <rect x="192" y="8" width="8" height="40" rx="4" fill="url(#waveform-gradient)"/>
-    <rect x="206" y="16" width="8" height="24" rx="4" fill="url(#waveform-gradient)"/>
+    <rect x="120" y="10" width="8" height="36" rx="4" fill="url(#waveform-gradient)"/>
+    <rect x="134" y="4" width="8" height="48" rx="4" fill="url(#waveform-gradient)"/>
+    <rect x="148" y="18" width="8" height="20" rx="4" fill="url(#waveform-gradient)"/>
+    <rect x="162" y="8" width="8" height="40" rx="4" fill="url(#waveform-gradient)"/>
+    <rect x="176" y="16" width="8" height="24" rx="4" fill="url(#waveform-gradient)"/>
   </g>
 </svg> 

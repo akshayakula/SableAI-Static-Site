@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /.git/
  
-Sitemap: https://sabl.ai/sitemap.xml 
+Sitemap: https://vonar.com/sitemap.xml 
